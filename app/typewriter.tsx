@@ -4,15 +4,15 @@ import { useState, useEffect } from "react";
 const hats = [
   {
     prep: "a",
-    suffix: "Programmer",
+    suffix: "Web Developer",
   },
   {
     prep: "a",
-    suffix: "Founder",
+    suffix: "UI/UX Designer",
   },
   {
     prep: "a",
-    suffix: "Golfer",
+    suffix: "Graphics Designer",
   },
 ];
 
@@ -23,10 +23,15 @@ type Hat = {
 
 type TypeWriterProps = {
   appendClass?: string;
+  hats: Hat[];
   prefix: string;
 };
 
-export default function TypeWriter({ appendClass, prefix }: TypeWriterProps) {
+export default function TypeWriter({
+  appendClass,
+  hats,
+  prefix,
+}: TypeWriterProps) {
   let className = "flex flex-col gap-4";
   if (appendClass) className += " " + appendClass;
 
